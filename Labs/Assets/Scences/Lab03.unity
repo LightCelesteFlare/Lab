@@ -867,9 +867,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0e7a08d59710a4b850ede048df4a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Screen1: {fileID: 0}
-  Screen2: {fileID: 0}
-  Screen3: {fileID: 0}
+  Screen1: {fileID: 1436918315}
+  Screen2: {fileID: 1202606262}
+  Screen3: {fileID: 253279564}
+  Player: {fileID: 315041175}
   playerPosition: {fileID: 315041180}
   FixView: {fileID: 1202606266}
   ZoomView: {fileID: 253279568}
