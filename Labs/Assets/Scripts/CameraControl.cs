@@ -3,38 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraControl : MonoBehaviour {
-
+    public GameObject Screen1;
+    public GameObject Screen2;
+    public GameObject Screen3;
+    public GameObject Player;
     public Transform playerPosition;
     public Transform FixView;
     public Transform ZoomView;
 
     private Transform camTrans;
-    public int size = 2;
+    public float size = 2f;
+    public float smooth = 0.3f;
     public int mode = 1;
     // Use this for initialization
     void Start()
     {
         camTrans = this.transform;
-
-}
+    }
 
     //Update is called once per frame
     void Update()
     {
         if (mode == 1) {
         camTrans.position = new Vector3(playerPosition.position.x, playerPosition.position.y, camTrans.position.z);
-            for (int i = 1; size > 2; i--)
-            {
-                Camera.main.orthographicSize = size - i;
-            }
+            size = 2;
+                Camera.main.orthographicSize = size;
+            
         }
         else if(mode == 2)
         {
         camTrans.position = new Vector3(FixView.position.x, FixView.position.y, camTrans.position.z);
-            for (int i = 1; size > 9; i++)
-            {
-                Camera.main.orthographicSize = size + i;
-            }
+            size = 7;
+            
+                Camera.main.orthographicSize = size;
+
         }
         //else if (mode == 3)
         //{
@@ -44,15 +46,15 @@ public class CameraControl : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Trigger1")
+        if (other.gameObject.tag == "Player")
         {
             mode = 1;
         }
-        else if (other.name == "Trigger2")
+        else if (other.gameObject.tag == "Player")
         {
             mode = 2;
         }
-        else if (other.tag == "Person")
+        else if (other.gameObject.tag == "Screen3")
         {
             //if(Input.GetKey("d"))
             //{
