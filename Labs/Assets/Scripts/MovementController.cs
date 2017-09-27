@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public float speed = 10.0f;
+
+    private Rigidbody2D rBody;
+
+    // Use this for initialization
+    void Start()
+    {
+        rBody = this.GetComponent<Rigidbody2D>();
+    }
+
+    void FixedUpdate()
+    {
+        float horizMove = Input.GetAxis("Horizontal");
+        //float vertMove = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(horizMove, 0, 0);
+        rBody.velocity = movement * speed;
+    }
+
 }
