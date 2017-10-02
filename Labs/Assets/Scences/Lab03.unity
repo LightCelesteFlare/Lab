@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 253279568}
   - component: {fileID: 253279567}
   - component: {fileID: 253279565}
+  - component: {fileID: 253279566}
   m_Layer: 0
   m_Name: Trigger3
   m_TagString: Untagged
@@ -150,6 +151,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.902108, y: 7.8274727}
   m_EdgeRadius: 0
+--- !u!114 &253279566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253279564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7992b5f5f01684b49a3bba818ed71700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camtrans: {fileID: 0}
+  mode: 3
+  camerascript: {fileID: 1842192611}
 --- !u!212 &253279567
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -219,7 +234,7 @@ GameObject:
   - component: {fileID: 315041176}
   m_Layer: 0
   m_Name: Me1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -582,6 +597,7 @@ GameObject:
   - component: {fileID: 1202606266}
   - component: {fileID: 1202606265}
   - component: {fileID: 1202606263}
+  - component: {fileID: 1202606264}
   m_Layer: 0
   m_Name: Trigger2
   m_TagString: Untagged
@@ -614,6 +630,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.578342, y: 8.162415}
   m_EdgeRadius: 0
+--- !u!114 &1202606264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202606262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7992b5f5f01684b49a3bba818ed71700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camtrans: {fileID: 0}
+  mode: 2
+  camerascript: {fileID: 1842192611}
 --- !u!212 &1202606265
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -679,9 +709,10 @@ GameObject:
   - component: {fileID: 1436918319}
   - component: {fileID: 1436918318}
   - component: {fileID: 1436918316}
+  - component: {fileID: 1436918317}
   m_Layer: 0
   m_Name: Trigger1
-  m_TagString: Untagged
+  m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -711,6 +742,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.230135, y: 7.98919}
   m_EdgeRadius: 0
+--- !u!114 &1436918317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436918315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7992b5f5f01684b49a3bba818ed71700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camtrans: {fileID: 0}
+  mode: 1
+  camerascript: {fileID: 1842192611}
 --- !u!212 &1436918318
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -873,7 +918,7 @@ MonoBehaviour:
   Player: {fileID: 315041175}
   playerPosition: {fileID: 315041180}
   FixView: {fileID: 1202606266}
-  ZoomView: {fileID: 253279568}
+  ZoomView: {fileID: 315041180}
   size: 2
   smooth: 0.3
   mode: 1
@@ -941,8 +986,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2120605333}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.78, y: 0.11, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.78, y: 0.110000014, z: 1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -7,6 +7,7 @@ public class MovementController : MonoBehaviour {
     public float speed = 10.0f;
 
     private Rigidbody2D rBody;
+    //public Transform camTrans;
 
     // Use this for initialization
     void Start()
@@ -23,4 +24,15 @@ public class MovementController : MonoBehaviour {
         rBody.velocity = movement * speed;
     }
 
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if(other.gameObject.tag == Trig1)
+    //    {
+            
+    //    }
+    //    if(other.gameObject.tag == Trig2)
+    //    {
+
+    //    }
+    //}
 }
